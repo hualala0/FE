@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>平均分统计</title>
+ </head>
+ <style>
+    body{
+        margin:0 auto;
+    }
+
+    #main{
+        height:400px;
+        position:relative;
+    }
+
+    #main #first{
+        width:400px;
+        height:400px;
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    #main #third{
+        height:400px;
+        margin:0 405px 0 405px;
+    }
+
+    #main #forth{
+        width:400px;
+        height:400px;
+        position:absolute;
+        right:0;
+        top:0;
+    }
+    #second{
+        height:400px;
+    }
+    </style>
+ <body>
+    <div id="main">
+        <div id="first"></div>
+        <div id="third"></div>
+        <div id="forth"></div>
+    </div>
+    <div id="second"></div>
+    <script src="./dist/bundle.js"></script>
+ </body>
+ </html> 
