@@ -14,6 +14,18 @@ chart3.setChart();
 let data3 = chart3.data[0]['course'];
 let chart4 = new Chart4('/specialties/软件工程/targets/'+data2+'/courses/'+data3, 'forth');
 chart4.setChart();
+chart2.myChart.on('click',  function (params) {
+    console.log(params);
+    chart3.setData(params.name);
+    console.log(chart3.data);
+    chart3.setChart();
+    //console.log(chart4.data);
+    console.log(chart3.data[0]['course']);
+    chart4.setData(chart3.data[0]['course'], params.name);
+    data2 = params.name;
+    console.log(chart4.data);
+    chart4.setChart();
+});
 chart3.myChart.on('click',  function (params) {
     console.log(params);
     chart4.setData(params.name,data2);

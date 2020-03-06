@@ -30,7 +30,18 @@ class Chart3 extends Chart{
         });
         //myChart.on('click', cb);
     }
-    //cb(params){}
+    setData(data){
+        let url1 = 'http://47.116.70.195/apis/specialties/软件工程/years/2010/targets/'+data;
+        let that = this;
+        let myAjax = new XMLHttpRequest();
+        myAjax.onreadystatechange = function(){
+            if (myAjax.readyState == 4 && myAjax.status == 200){
+                that.data = JSON.parse(myAjax.responseText);
+            }
+        }
+        myAjax.open("GET", url1, false);
+        myAjax.send();
+    }
 }
 
 module.exports = Chart3;
